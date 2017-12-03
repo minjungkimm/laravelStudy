@@ -40,7 +40,7 @@ Route::get('/{foo?}',function($foo='bar'){
 // ;(세미콜론) 주의하기!
 //위와 같은 패턴제한 주는 것!
 */
-
+/*
 Route::get('/',[
 	'as'=>'me',
 	function(){
@@ -50,7 +50,7 @@ Route::get('/',[
 
 Route::get('me',function(){
 	return redirect(route('me'));
-});
+});*/
 //'/'를 쳐도 '/'로 이동되 리턴 값 출력
 //'me'를 쳐도 '/'로 이동되 리턴 값 출력
 //'me'는 'as'=>'me'의 'me'로 이동됨
@@ -64,3 +64,31 @@ Route::get('me',function(){
 //코드를 전부 뒤져 수정할 수고를 덜어준다
 //예를 들어, Route::get() 메서드의 두번째 인자를 배열로 전달하는데
 //배열 원소에 'as'=>'라우트_이름'을 정의하면 됨
+
+/*Route::get('/',function(){
+	return view('errors.503');
+});*/
+//하위디렉토리 참조시 . 사용
+//.blade.php 없이 파일 이름만 인자로 넘긴다
+
+/*Route::get('/',function(){
+	return view('welcome')->with('name','Foo');
+	//with 메서드 이용방법
+});*/
+
+/*Route::get('/',function(){
+	return view('welcome')->with([
+		'name'=>'Foo',
+		'greeting'=>'안녕하세요?',
+	]);
+	//with 메서드 배열이용 여러개 데이터 넘김
+});*/
+
+/*
+//view() 함수 이용 방법
+Route::get('/',function(){
+	return view('welcome',[
+		'name'=>'Foo',
+		'greeting'=>'안녕하세요?',
+	]);
+});*/
