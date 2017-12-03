@@ -91,4 +91,15 @@ Route::get('/',function(){
 		'name'=>'Foo',
 		'greeting'=>'안녕하세요?',
 	]);
+});
+*/
+
+/*
+Route::get('/',function(){
+	$items = ['apple','banna','tomate'];
+	return view('welcome',['items'=>$items]);
 });*/
+
+Route::get('/',function(){
+	return view('welcome');
+});
