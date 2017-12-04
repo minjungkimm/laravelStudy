@@ -100,6 +100,11 @@ Route::get('/',function(){
 	return view('welcome',['items'=>$items]);
 });*/
 
-Route::get('/',function(){
+/*Route::get('/',function(){
 	return view('welcome');
-});
+});*/
+
+
+Route::get('/','WelcomeController@index');
+
+Route::resource('articles','ArticlesController');
