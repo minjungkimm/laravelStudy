@@ -8,5 +8,5 @@ class Post extends Model
 {
     //
     public $timestamps = false;
-    protected $fileable = ['title','body'];
+    protected $fillable = ['title','body'];
 }
